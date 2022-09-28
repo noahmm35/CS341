@@ -55,7 +55,7 @@ class StandardDeck
 		
 		bool mergeDecks(StandardDeck &, bool);
 		
-		//void dealCard();
+		Card dealCard();
 		
 	protected: 
 		Card * deck_;	// Pointer to record the location of the array of Cards in memory.
