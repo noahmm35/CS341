@@ -4,23 +4,37 @@
 
 int main()
 {	
-	StandardDeck dk;
-	dk.initializeDeck();
+	StandardDeck bg;
+	StandardDeck p1;
+	StandardDeck p2;
+
+	bg.initializeDeck();
+	bg.shuffle();
 	
-	dk.mergeDecks(dk,1);
+	bg.displayCard(51);
 	
-	std::cout << "Is the Deck Empty? " << dk.isEmpty() << std::endl;
-	std::cout << "Number of Cards: " << dk.getNumCards() << std::endl;
+	/* while(!bg.isEmpty())
+	{
+		int i=0;
+		
+		if(i%2==0)
+		{
+			p1.addCard(bg.dealCard());
+		}
+		else
+		{
+			p2.addCard(bg.dealCard());
+		}
+	}
 	
-	dk.displayCard(1);
-	dk.displayCard(52);
-	dk.displayCard(100);
+	std::cout << "Player 1 Deck: " << std::endl;
+	p1.printDeck();
+	std::cout << "Player 2 Deck: " << std::endl;
+	p2.printDeck();
 	
-	dk.shuffle();
-	
-	dk.displayCard(1);
-	dk.displayCard(52);
-	dk.displayCard(100);	
+	std::cout << "Bg Cards: " << bg.getNumCards() << std::endl;
+	std::cout << "P1 Cards: " << p1.getNumCards() << std::endl;
+	std::cout << "P2 Cards: " << p2.getNumCards() << std::endl;*/
 	
 	return 0;
 }
