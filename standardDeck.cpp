@@ -91,7 +91,14 @@ void StandardDeck::shuffle()
 
 bool StandardDeck::mergeDecks(StandardDeck & k, bool b)
 {
-	//imma come back to this... i guess i dont need it for war?
+	Card c[104];
+	
+	for()
+	{
+		
+	}
+	
+	deck_=&c[0];
 	return 1;
 }
 
