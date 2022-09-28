@@ -5,6 +5,7 @@ StandardDeck::StandardDeck()
 {
 	numCards_=0;
 	deck_ = new Card[52];
+	cap_=52;
 }
 
 StandardDeck::~StandardDeck()
@@ -32,7 +33,7 @@ void StandardDeck::displayCard(int i)
 
 void StandardDeck::printDeck()
 {
-	for(int i=0; i<52; i++)
+	for(int i=0; i<=56; i++)
 	{
 		std::cout << deck_[i].print() << std::endl;
 	}
@@ -53,11 +54,12 @@ void StandardDeck::initializeDeck()
 		}
 	} 
 	numCards_=a;
+	cap_=a;
 }
 
 bool StandardDeck::addCard(Card c)
 {
-	if(numCards_<=52)
+	if(numCards_<=cap_)
 	{
 		deck_[++numCards_]=c;
 		return 1;
@@ -78,7 +80,7 @@ void StandardDeck::shuffle()
 		{
 			int r(0);
 			Card swap = Card();
-			r=(rand() % numCards_)+1;
+			r=rand() % numCards_+1;
 			
 			swap=deck_[i-1];
 			deck_[i-1]=deck_[r];
@@ -89,24 +91,17 @@ void StandardDeck::shuffle()
 
 bool StandardDeck::mergeDecks(StandardDeck & k, bool b)
 {
-	Card c[104];
-	
-	for(int i=0; i<=104; i=i+2)
-	{
-		c[i]=deck_[i];
-		c[i+1]=deck_[i];
-	}
-	deck_=&c[0];
-	
-	if(b)
-	{
-		k.shuffle();
-	}
+	//imma come back to this... i guess i dont need it for war?
 	return 1;
-
 }
 
-/* void StandardDeck::dealCard()
+Card StandardDeck::dealCard()
 {
-	
-} */
+	if(!isEmpty())
+	{
+		return(deck_[numCards_--]);
+		numCards_--;
+	}
+	else
+		return Card(0,0);
+} 
