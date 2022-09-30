@@ -1,3 +1,15 @@
+// Honor Pledge:
+
+//
+
+// I pledge that I have neither given nor
+
+// received any help on this assignment.
+
+//
+
+// nmmonroe
+
 #ifndef STANDARD_DECK_H
 #define STANDARD_DECK_H
 
@@ -56,6 +68,8 @@ class StandardDeck
 		bool mergeDecks(StandardDeck &, bool);
 		
 		Card dealCard();
+		
+		std::string getTop();
 		
 	protected: 
 		Card * deck_;	// Pointer to record the location of the array of Cards in memory.

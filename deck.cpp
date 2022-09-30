@@ -10,21 +10,15 @@
 
 // nmmonroe
 
-#include "standardDeck.h"
+#include "deck.h"
 #include <iostream>
 
-StandardDeck::StandardDeck()
+Deck::Deck()
 {
-	numCards_=0;
-	deck_ = new Card[52];
+	
 }
 
-StandardDeck::~StandardDeck()
-{
-	delete [] deck_;
-}
-
-bool StandardDeck::isEmpty()
+bool Deck::isEmpty()
 {
 	if(numCards_==0)
 		return 1;
@@ -32,17 +26,17 @@ bool StandardDeck::isEmpty()
 		return 0;
 }
 
-int StandardDeck::getNumCards()
+int Deck::getNumCards()
 {
 	return numCards_;
 }
 
-void StandardDeck::displayCard(int i)
+void Deck::displayCard(int i)
 {
 	std::cout << i << "th Card: " << deck_[i-1].print() << std::endl;
 }
 
-void StandardDeck::printDeck()
+void Deck::printDeck()
 {
 	for(int i=0; i<numCards_; i++)
 	{
@@ -50,40 +44,17 @@ void StandardDeck::printDeck()
 	}
 }
 
-void StandardDeck::initializeDeck()
+bool Deck::addCard(Card c)
 {
- 	int a=0;
-	Card cards[52];
-
-	for(int i=1; i<=4; i++)
-	{
-		for(int j=1; j<=13; j++)
-		{
-			cards[a].initialize(j,i);
-			deck_[a]=cards[a];
-			a++;
-		}
-	} 
-	numCards_=a;
-}
-
-bool StandardDeck::addCard(Card c)
-{
-	if(numCards_<=52)
-	{
-		deck_[numCards_]=c;
-		numCards_++;
+	if(numCards_==0)
 		return 1;
-	}
 	else
-	{
 		return 0;
-	}
 }
 
-void StandardDeck::shuffle()
-{	
-	srand((unsigned) time(0));
+void Deck::shuffle()
+{
+	srand(time(0));
 	
 	for(int t=1; t<=5; t++)
 	{
@@ -100,7 +71,7 @@ void StandardDeck::shuffle()
 	}
 }
 
-bool StandardDeck::mergeDecks(StandardDeck & k, bool b)
+bool Deck::mergeDecks(StandardDeck & k, bool b)
 {
 	int t=0,count=0;
 	t=k.numCards_ + numCards_;
@@ -127,7 +98,7 @@ bool StandardDeck::mergeDecks(StandardDeck & k, bool b)
 	return 1;
 }
 
-Card StandardDeck::dealCard()
+Card Deck::dealCard()
 {
 	if(numCards_!=0)
 	{
@@ -136,12 +107,50 @@ Card StandardDeck::dealCard()
 	}
 	else
 		return Card(0,0);
-} 
+}
 
-std::string StandardDeck::getTop()
+std::string Deck::getTop()
 {
 	if(numCards_>0)
 		return deck_[numCards_-1].getFace();
 	else
 		return "Ouch";
+}
+
+void StandardDeck::initializeDeck()
+{
+ 	int a=0;
+	Card cards[52];
+
+	for(int i=1; i<=4; i++)
+	{
+		for(int j=1; j<=13; j++)
+		{
+			cards[a].initialize(j,i);
+			deck_[a]=cards[a];
+			a++;
+		}
+	} 
+	numCards_=a;
+}
+
+void NonStandardDeck::initializeDeck()
+{
+	int size=0, fillFace=0, fillSuit=0;
+	std::ifstream input("deck.txt");
+	
+	if(input.is_open())
+	{
+		input >> size;
+		
+		deck_ = new Card[size];
+		
+		for(int i=0; i<size; i++)
+		{
+			input >> fillSuit >> fillFace;
+			Card hold= Card(fillFace, fillSuit);
+			deck_[i]=hold;
+		}
+		numCards_=size-1;
+	}
 }

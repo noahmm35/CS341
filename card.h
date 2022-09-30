@@ -1,3 +1,15 @@
+// Honor Pledge:
+
+//
+
+// I pledge that I have neither given nor
+
+// received any help on this assignment.
+
+//
+
+// nmmonroe
+
 #ifndef CARD_H
 #define CARD_H
 
