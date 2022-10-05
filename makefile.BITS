@@ -1,0 +1,11 @@
+bit.exe: driver3.o bitarray.o
+	g++ driver3.o bitarray.o -o bit.exe
+	
+driver3.o:
+	g++ -c driver3.cpp -o driver3.o
+	
+bitarray.o:
+	g++ -c bitarray.cpp -o bitarray.o
+
+clean:
+	rm *.o bit.exe
