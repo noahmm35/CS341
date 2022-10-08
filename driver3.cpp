@@ -1,22 +1,14 @@
 #include "bitarray.h"
 #include <iostream>
-#include <string>
+#include <cstring>
 
 int main()
 {	
-	int size=0;
-	char * word = new char[4];
-	word[0]= 'n';
-	word[1]= 'o';
-	word[2]= 'a';
-	word[3]= 'h';
+	char test[] = "Noah";
 	
-	size=sizeof(word)/sizeof(char);
+	BitArray Name(0);
 	
-	std::cout << "Size: " << size << std::endl;
-	
-	BitArray Name(size);
-	Name.initialize(word,size);
+	Name.initialize(test,strlen(test));
 	
 	Name.print();
 	std::cout << std::endl;
@@ -38,7 +30,7 @@ int main()
 	
 	std::cout << "Complement: " << std::endl;
 	Name.complement();
-	Name.print();
+	Name.print(); 
 	
 	std::cout << std::endl;
 	
