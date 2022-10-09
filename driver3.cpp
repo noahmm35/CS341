@@ -6,7 +6,7 @@ int main()
 {	
 	char test[] = "Noah";
 	
-	BitArray Name(0);
+	BitArray Name(strlen(test));
 	
 	Name.initialize(test,strlen(test));
 	
