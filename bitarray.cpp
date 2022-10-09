@@ -15,12 +15,10 @@ BitArray::BitArray(const BitArray & array) : BYTES(array.BYTES)
 
 BitArray::~BitArray()
 {
-	delete [] data_;
-}
-
-int BitArray::getLength()
-{
-	return LENGTH;
+	if(data_!=nullptr)
+	{
+		delete [] data_;
+	}
 }
 
 bool BitArray::get(int position) const
