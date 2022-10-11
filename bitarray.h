@@ -152,8 +152,6 @@ class BitArray
 	    */ 
 		void set8(char c, int index);
 		
-		int getLength();
-		
 	protected:
 		int LENGTH;	// Length of BitArray in terms of bits.
 		int BYTES; // Number of bytes required for BitArray.
