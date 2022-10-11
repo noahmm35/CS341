@@ -109,7 +109,16 @@ void BitArray::clear()
 void BitArray::initialize(char * word, int size)
 {
 	BYTES=size;
-	data_= new char[BYTES];
 	LENGTH=8*BYTES;
-	data_=word;
+	data_= new char[BYTES];
+	
+	for(int i=0;i<size;i++)
+	{
+		data_[i]=word[i];
+	}
+}
+
+void BitArray::set8(char c, int index)
+{
+	data_[index]=c;
 }
