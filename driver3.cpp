@@ -1,35 +1,35 @@
+// Honor Pledge:
+
+//
+
+// I pledge that I have neither given nor
+
+// received any help on this assignment.
+
+//
+
+// nmmonroe
+
 #include "bitarray.h"
 #include "set.h"
+#include "dictionary.h"
 #include <iostream>
 #include <cstring>
 
 int main()
 {	
 	char test[] = "Noah";
-	char test2[] = "Taco";
-	
-	Set Name(strlen(test));
-	Set Food(strlen(test2));
-	
+
+	Dictionary Name;
 	Name.initialize(test,strlen(test));
-	Food.initialize(test2,strlen(test2));
 	
-	Name.getData();
-	Food.getData();
-	std::cout << std::endl;
 	
-	std::cout << "Cardinality (name): " << Name.getCardinality() << std::endl;
-	std::cout << "Cardinality (food): " << Food.getCardinality() << std::endl;
+	std::cout << "Rank: " << Name.rank(31,1) << std::endl;
+	std::cout << "Rank Range (0,15): " << Name.rank_range(0, 15, 1) << std::endl;
+	std::cout << "Select (9,1): " << Name.select(9,1) << std::endl;
+	std::cout << "Select Range (16,31,2,1): " << Name.select_range(16, 31, 2, 1) << std::endl;
 	
-	std::cout << std::endl;
-	
-	std::cout << "Set Union A U B: " << std::endl;
-	Name.setUnion(Food);
-	std::cout << std::endl;
-	
-	std::cout << "Set Intersection A x B: " << std::endl;
-	Name.setIntersection(Food);
-	std::cout << std::endl;
+	std::cout << "\n";
 	
 	return 0;
 }
