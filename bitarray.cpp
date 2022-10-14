@@ -1,3 +1,16 @@
+
+// Honor Pledge:
+
+//
+
+// I pledge that I have neither given nor
+
+// received any help on this assignment.
+
+//
+
+// nmmonroe
+
 #include "bitarray.h"
           
 BitArray::BitArray(int size)
