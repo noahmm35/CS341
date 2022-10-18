@@ -113,7 +113,7 @@ class Dictionary {
 		int * lookupTable_;	// Lookup Table (Dynamically Allocated Array)
        
 	private:
-		// HELPER METHODS GO HERE.
+		void populateLookup();
 }; 
 
 #endif
