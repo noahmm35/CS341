@@ -1,0 +1,20 @@
+dll.exe: driver4.o DoublyLinkedList.o LinkedList.o LinkedNode.o Node.o
+	g++ driver4.o DoublyLinkedList.o LinkedList.o LinkedNode.o Node.o -o dll.exe
+	
+driver4.o:
+	g++ -c driver4.cpp -o driver4.o
+	
+DoublyLinkedList.o:
+	g++ -c DoublyLinkedList.cpp -o DoublyLinkedList.o
+	
+LinkedList.o:
+	g++ -c LinkedList.cpp -o LinkedList.o
+	
+LinkedNode.o:
+	g++ -c LinkedNode.cpp -o LinkedNode.o
+
+Node.o:
+	g++ -c Node.cpp -o Node.o
+	
+clean:
+	rm *.o dll.exe
