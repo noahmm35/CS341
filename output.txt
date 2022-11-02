@@ -1,0 +1,2 @@
+Total number of BIG DAWG HOPS (unsorted): 61
+Total number of BIG DAWG HOPS (sorted): 1076
