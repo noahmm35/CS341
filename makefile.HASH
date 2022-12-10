@@ -1,0 +1,32 @@
+a6.exe: driver6.o HashTableCuckoo.o HashTableChaining.o HashTableArray.o DoublyLinkedList.o LinkedList.o LinkedNode.o Node.o HashEntry.o
+	g++ driver6.o HashTableCuckoo.o HashTableChaining.o HashTableArray.o DoublyLinkedList.o LinkedList.o LinkedNode.o Node.o HashEntry.o -o a6.exe
+	
+driver6.o:
+	g++ -c driver6.cpp -o driver6.o
+	
+HashTableCuckoo.o:
+	g++ -c HashTableCuckoo.cpp -o HashTableCuckoo.o
+	
+HashTableChaining.o:
+	g++ -c HashTableChaining.cpp -o HashTableChaining.o
+	
+HashTableArray.o:
+	g++ -c HashTableArray.cpp -o HashTableArray.o
+	
+DoublyLinkedList.o:
+	g++ -c DoublyLinkedList.cpp -o DoublyLinkedList.o
+	
+LinkedList.o:
+	g++ -c LinkedList.cpp -o LinkedList.o
+	
+LinkedNode.o:
+	g++ -c LinkedNode.cpp -o LinkedNode.o
+	
+Node.o:
+	g++ -c Node.cpp -o Node.o
+	
+HashEntry.o:
+	g++ -c HashEntry.cpp -o HashEntry.o
+	
+clean:
+	rm *.o a6.exe
