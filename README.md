@@ -2,13 +2,26 @@
 
 ## Assignment 1
 
-Assignment 1 - Classes and Object in C++
+Introduction to classes and objects in C++
 
-Assignment 3 - Bitwise operations & Bit Arrays
+Goal is to simulate stock-car race and determine a winner
 
-Assignment 4 - (Doubly) Linked Lists
+## Assignment 2
 
-Assignment 5 - Red Black Trees
+Work in progess, more advanced version of Assignment 1
 
-Assignment 6 - Hash Tables
+## Assignment 3
 
+Bit Arrays & Bitwise operations
+
+## Assignment 4
+
+(Doubly) Linked Lists
+
+## Assignment 5
+
+Red-Black Trees
+
+## Assignment 6
+
+Hashing / Hash Tables
