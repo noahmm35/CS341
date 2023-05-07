@@ -1,6 +1,6 @@
 # CS341: AdvancedDataStructures
 
-## Assignment 1
+### Assignment 1
 
 Introduction to classes and objects in C++
 
