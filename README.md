@@ -1,6 +1,6 @@
-# CS341_AdvancedDataStructures
+# CS341: AdvancedDataStructures
 
-This is Noah Monroe's repo for all projects from Butler University's CS341 - Advanced Data Structures
+## Assignment 1
 
 Assignment 1 - Classes and Object in C++
 
