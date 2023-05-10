@@ -4,11 +4,13 @@
 
 Introduction to classes and objects in C++
 
-Goal is to simulate stock-car race and determine a winner
+Simulate Indy 500 and declare a winner
 
 ## Assignment 2
 
-Work in progess, more advanced version of Assignment 1
+**Work in progess,** more advanced version of Assignment 1
+
+Simulate a game of war (w/ cards)
 
 ## Assignment 3
 
@@ -25,3 +27,5 @@ Red-Black Trees
 ## Assignment 6
 
 Hashing / Hash Tables
+
+i.e. Linear Probing, Quadratic Probing, Seperate Chaining, Cuckoo Hashing
