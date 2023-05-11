@@ -1,31 +1,31 @@
-# CS341: AdvancedDataStructures
+## CS341: Advanced Data Structures (C++)
 
-## Assignment 1
+### Assignments Above:
 
-Introduction to classes and objects in C++
+1. [Indy 500](https://github.com/noahmm35/CS341/tree/main/Assignment1)
 
-Simulate Indy 500 and declare a winner
+   Intro to classes/ objects in C++ 
 
-## Assignment 2
+   Simulate Indy 500 and declare a winner
 
-**Work in progess,** more advanced version of Assignment 1
+2. **Work in Progress** - [War](https://github.com/noahmm35/CS341/tree/main/Assignment2)
 
-Simulate a game of war (w/ cards)
+   More advanced version of Assignment 1
 
-## Assignment 3
+   Simulate a game of war (w/ cards)
 
-Bit Arrays & Bitwise operations
+3. [Bit Arrays](https://github.com/noahmm35/CS341/tree/main/Assignment3)
 
-## Assignment 4
+   Bit Arrays & Bitwise Operations
 
-(Doubly) Linked Lists
+4. [(Doubly) Linked List](https://github.com/noahmm35/CS341/tree/main/Assignment4)
 
-## Assignment 5
+   Linked List/ Doubly Linked List implementation
 
-Red-Black Trees
+5. [Red Black Trees](https://github.com/noahmm35/CS341/tree/main/Assignment5)
 
-## Assignment 6
+   Red Black Tree implementation
 
-Hashing / Hash Tables
+6. [Hash Tables](https://github.com/noahmm35/CS341/tree/main/Assignment6)
 
-i.e. Linear Probing, Quadratic Probing, Seperate Chaining, Cuckoo Hashing
+   Hashing & Collision avoidance (i.e. Linear/ Quadratic Probing, Seperate Chaining, Cuckoo Hashing)
